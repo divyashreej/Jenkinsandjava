@@ -70,7 +70,7 @@ pipeline {
                 script {
                     sh '''
                         echo "Logging into AWS ECR..."
-                        aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 048051882772.dkr.ecr.ap-south-1.amazonaws.com
+                        aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 048051882772.dkr.ecr.ap-south-1.amazonaws.com/test-image
                     '''
                 }
             }

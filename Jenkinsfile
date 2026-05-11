@@ -81,7 +81,7 @@ pipeline {
                 script {
                     sh '''
                         echo "Building Docker image..."
-                        docker build -t ${IMAGE_URI} .
+                        sudo docker build -t ${IMAGE_URI} .
                     '''
                 }
             }
@@ -92,7 +92,7 @@ pipeline {
                 script {
                     sh '''
                         echo "Pushing Docker image to ECR..."
-                        docker push ${IMAGE_URI}
+                        sudo docker push ${IMAGE_URI}
                             '''
                         }
                     }

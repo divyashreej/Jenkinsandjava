@@ -93,8 +93,9 @@ pipeline {
                     sh '''
                         echo "Pushing Docker image to ECR..."
                         docker push ${IMAGE_URI}
-                    '''
-                }
-            }
+                            '''
+                        }
+                    }
         }
     }
+}    

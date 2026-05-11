@@ -1,3 +1,3 @@
 @Library('mylibrary') _
 
-myPipeline()
+buildPipe()

@@ -1,0 +1,3 @@
+@Library('mylibrary') _
+
+myPipeline()

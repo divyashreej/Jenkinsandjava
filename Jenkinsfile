@@ -90,7 +90,7 @@ pipeline {
                     sh '''
                         echo "Building Docker image..."
 
-                        sudo docker build -t ${IMAGE_URI} .
+                        docker build -t ${IMAGE_URI} .
                     '''
                 }
             }
@@ -102,7 +102,7 @@ pipeline {
                     sh '''
                         echo "Pushing Docker image to ECR..."
 
-                        sudo docker push ${IMAGE_URI}
+                        docker push ${IMAGE_URI}
                     '''
                 }
             }

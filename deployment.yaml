@@ -18,6 +18,6 @@ spec:
     spec:
       containers:
       - name: myapp-container
-        image: test-image
+        image: IMAGE-NAME
         ports:
         - containerPort: 8080

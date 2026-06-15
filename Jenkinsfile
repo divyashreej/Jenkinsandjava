@@ -8,7 +8,7 @@ pipeline {
         AWS_REGION = 'ap-south-1'
         ECR_REPO_NAME = 'test-image'
         AWS_ACCOUNT_ID = '048051882772'
-        ECR_REPO_URI = "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/${ECR_REPO_NAME}"
+        ECR_REPO_URI = "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/${ECR_REPO_NAME}" 
         IMAGE_URI = "${ECR_REPO_URI}:${BUILD_NUMBER}"
     }
 

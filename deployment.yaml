@@ -18,6 +18,6 @@ spec:
     spec:
       containers:
       - name: myapp-container
-        image: 048051882772.dkr.ecr.ap-south-1.amazonaws.com/test-image:22
+        image: IMAGE_NAME
         ports:
         - containerPort: 8080

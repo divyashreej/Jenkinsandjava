@@ -123,7 +123,8 @@ pipeline {
       stage('Deploy to EKS') {
             steps {
                 sh '''
-                    
+                
+                sed -i "s|IMAGE_NAME|$IMAGE_URI|g" deployment.yaml   
                 kubectl apply -f deployment.yaml
                 
                 kubectl rollout status deployment/myapp

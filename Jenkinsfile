@@ -123,8 +123,7 @@ pipeline {
       stage('Deploy to EKS') {
             steps {
                 sh '''
-                    kubectl set image deployment/myapp \
-                    myapp-container=${IMAGE_URI}
+                    
                 kubectl apply -f deployment.yaml
                 
                 kubectl rollout status deployment/myapp

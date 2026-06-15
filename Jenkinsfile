@@ -125,7 +125,8 @@ pipeline {
                 sh '''
                     kubectl set image deployment/myapp \
                     myapp-container=${IMAGE_URI}
-
+                kubectl apply -f deployment.yaml
+                
                 kubectl rollout status deployment/myapp
         '''
             }

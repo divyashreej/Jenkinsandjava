@@ -124,7 +124,7 @@ pipeline {
             steps {
                 sh '''
                     kubectl set image deployment/myapp \
-                    myapp-container=${IMAGE_URI}:${BUILD_NUMBER}
+                    myapp-container=${IMAGE_URI}
 
                 kubectl rollout status deployment/myapp
         '''

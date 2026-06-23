@@ -108,30 +108,7 @@ pipeline {
             }
         }
 
-        stage('Configure EKS') {
-            steps {
-                sh '''
-                    aws eks update-kubeconfig \
-                      --region ap-south-1 \
-                      --name my-cluster
-
-                    kubectl get nodes
-                '''
-            }
-        }
-
-      stage('Deploy to EKS') {
-            steps {
-                sh '''
-                
-                sed -i "s|IMAGE_NAME|$IMAGE_URI|g" deployment.yaml   
-                kubectl apply -f deployment.yaml
-                
-                kubectl rollout status deployment/myapp
-        '''
-            }
-        }
-
-        
+  
+     
     }
 }
